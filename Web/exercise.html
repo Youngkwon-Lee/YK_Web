@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web 3.0 Homepage</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"> 
+                <img src="images/logos.png" alt="logo" class="logo-1"> 
+                <h1 class="site-title ml-3 mb-0 animated fadeInLeft">Web 3.0</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="index.html" data-scroll-nav="0">Web</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html" data-scroll-nav="1">HTML</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="css.html" data-scroll-nav="2">CSS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="javascript.html" data-scroll-nav="3">Javascript</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="solidity.html" data-scroll-nav="4">Solidity</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="exercise.html" data-scroll-nav="5">Exercise</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Day/Night mode button -->
+    <input type="button" value="day" onclick="nightDayHandler(this);" class="day-night-button animated fadeIn">
+
+    <h1><a href="index.html">E to E</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="index.html" class="saw" id="active">HTML</li>
+            <li><a href="css.html" style="color : blue; text-decoration: underline;">CSS</a></li>
+            <li><a href="javascript.html">Javascript</a></li>
+            <li><a href="solidity.html">SOLIDITY</a></li>
+            <li><a href="exercise.html">Exercise</a></li>
+
+        </ol>
+        <div>
+            <p>
+                <a href="http://www.w3.org/" target="_blank" title="W3 Hompage"> Exercise to Earn</a> is the
+                Blockchain technoligy for customers.
+                <p>
+                <a href="http://www.w3.org/" target="_blank" title="W3 Hompage"> E to E</a> is the
+                Blockchain technoligy for customers.
+                </p>
+                <p>
+                <a href="http://www.w3.org/" target="_blank" title="W3 Hompage"> E to E</a> is the
+                Blockchain technoligy for customers.
+                </p>
+            </p>
+            <img src="exercise.jpg" width="90%">   
+        </div>
+    </div>
+</body>
+</html>

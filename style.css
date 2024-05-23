@@ -1,0 +1,150 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(270deg, #c5bbb8, #f7e7da, #e5e6e9, #8fa7a5);
+    background-size: 800% 800%;
+    animation: gradient 15s ease infinite;
+
+}
+
+/* Day/Night mode button */
+.day-night-button {
+    position: fixed;
+    top: 10px; /* 상단 여백 */
+    right: 10px; /* 오른쪽 여백 */
+    z-index: 1050; /* 네비게이션 바보다 위에 표시 */
+    padding: 10px 20px;
+    background-color: #007BFF; /* 버튼 배경색 */
+    color: #ffffff; /* 버튼 텍스트 색 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: #007BFF;
+}
+a:hover {
+    color: #1e90ff;
+}
+h1, h2, h3 {
+    font-weight: 700;
+}
+h4, h5 {
+    font-weight: 600;
+}
+h6 {
+    font-weight: 500;
+}
+.white {
+    color: #ffffff !important;
+}
+.black {
+    color: #000000;
+}
+
+.logo-1 {
+    max-width: 40px; /* 이미지의 최대 너비를 40픽셀로 설정 */
+    height: auto; /* 높이는 자동으로 조절 */
+}
+.navbar {
+    position: fixed; 
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 50px;
+    line-height: 50px;
+    z-index: 1030;
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922); /* 네비게이션 바 그림자 추가 */
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradient 15s ease infinite;
+	
+}
+
+.navbar .active {
+    color: #5f0099 !important;
+}
+
+.content {
+    margin-top: 70px; /* 네비게이션 바와 컨텐츠 사이의 간격 */
+}
+
+.navbar .navbar-brand {
+    color: #333;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+}
+.navbar .nav-item {
+    margin: 0 10px; /* 각 메뉴 항목 사이에 좌우 여백 추가 */
+}
+.navbar .nav-link {
+    color: #007BFF; /* 링크 기본 색상 */
+    transition: color 0.2s; /* 색상 변화에 트랜지션 효과 추가 */
+}
+.navbar .nav-link:hover {
+    color: #1e90ff; /* 링크 호버 시 색상 */
+}
+#grid {
+    display: flex;
+    justify-content: space-between; /* 내비게이션과 콘텐츠를 양 끝에 배치 */
+    flex-wrap: wrap; /* 작은 화면에서 항목들이 줄을 바꾸어 표시되도록 설정 */
+}
+#grid ol {
+    list-style-type: none; /* 리스트 아이템 앞의 기본 번호 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+#grid ol li {
+    margin-bottom: 10px; /* 각 리스트 항목 사이에 아래쪽 여백 추가 */
+}
+#grid ol li a {
+    text-decoration: none;
+    color: #007BFF; /* 링크 기본 색상 */
+    transition: color 0.2s; /* 색상 변화에 트랜지션 효과 추가 */
+}
+#grid ol li a:hover {
+    color: #1e90ff; /* 링크 호버 시 색상 */
+}
+#content {
+    max-width: 600px; /* 콘텐츠 최대 너비 설정 */
+    flex-grow: 1; /* 가능한 공간을 채우도록 설정 */
+    padding-left: 20px; /* 왼쪽 여백 추가 */
+}
+.sidebar {
+    background-color: #f8f9fa; /* 사이드바 배경색 설정 */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 사이드바 그림자 추가 */
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+.sidebar ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.sidebar ul li a:hover {
+    color: #1e90ff;
+}

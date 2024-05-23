@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web 3.0 Homepage</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="../../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="../../index.html"> 
+                <img src="../images/logos.png" alt="logo" class="logo-1"> 
+                <h1 class="site-title ml-3 mb-0 animated fadeInLeft">Web 3.0</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="0">Web</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="1">HTML</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../css.html" data-scroll-nav="2">CSS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../javascript.html" data-scroll-nav="3">Javascript</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../solidity.html" data-scroll-nav="4">Solidity</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../exercise.html" data-scroll-nav="5">Exercise</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Day/Night mode button -->
+    <input type="button" value="day" onclick="nightDayHandler(this);" class="day-night-button animated fadeIn">
+
+    <h1>1. 고객여정매핑</h1>
+    <br>
+    <br>
+    <br>
+
+    <div id="grid">
+        <ol>
+            <li>Q1. LLM 연동 챗봇을 개발하려고 해. 그런데 이 챗봇의 주된 사용자는 재활에 필요한 문의할 사항이 있는 환자야. 이 환자는 근골격계 통증이 있어. 통증의 원인 및 해결책 그리고 운동방법을 알려달라고 하는 문의가 많아. 허리통증, 목통증, 무릎통증, 발목통증, 손목통증 등을 가지고 있는 환자들이 많아. 이런 상황에서 통증원인을 분석하려고하는데, 일단 적절한 페르소나를 구성해 줘.
+                <br><strong>Answer:</strong> 페르소나: 건강 도우미 "헬시" - 친절하고 공감적, 신뢰할 수 있는, 참을성 있는, 적극적<br>
+            </li><br>
+            
+            <li>Q2. 그러면 이 페르소나들을 가상의 인물로 설정하고, 이 인물들을 대상으로 챗봇 개발에 대한 대면조사(인터뷰)를 했을 때 나올 법한 요구사항들을 각 페르소나별로 최대한 나열해 줘.
+                <br><strong>Answer:</strong> 가상의 인물 요구사항 - 자세 교정, 스트레칭 안내, 통증 완화 팁 등<br>
+            </li><br>
+            <li>Q3. LLM 연동 챗봇을 개발하는 과정에서 RAG 기술을 동원해서 이러한 다양한 통증에 대한 질문에 응답할 수 있게 하려고 해. 즉, 우리가 개발하려고 하는 챗봇은 기존의 규칙 기반 챗봇과 다르게, 매끄럽게 자연어 질문과 자연어 답변을 할 수 있으면서 동시에 이 챗봇 운영 주체가 되는 의료/연구기관에 있는 다양한 자료를 검색 증강생성(RAG) 작업에 활용하는 챗봇이 될 거야. 이제 조금 전에 나왔던 수 많은 욕사항들을 이런 챗봇에 반영하기 위해 요구사항들에 우선순위를 매기려고 해. 내가 특정 우선 순위 결정 방법을 지정하면 그 방법에 맞춰 요구사항들의 우선순위를 결정해 줘. 그렇게 할 수 있지? 할 수 있다면 일단 '예'라고 대답해 줘.
+                <br><strong>Answer:</strong> 예.<br>
+            </li><br>
+            <li>Q4. 우선순위 결정 방법 1: MosCow
+                <br><strong>Answer:</strong> 요구사항 우선순위 결정 - Must Have, Should Have, Could Have, Won't Have<br>
+            </li><br>
+            <li>Q5. 우선순위 결정 방법 1: Kano 모델
+                <br><strong>Answer:</strong> 우선순위 결정 - 기본적 요구, 성능 요구, 매력적 요구, 무관한 요구, 반대 요구<br>
+            </li><br>
+            <li>Q6. Eisenhower Matrix로 우선 순위를 결정해 주되, 이 행렬을 표 형태로도 그려줘.
+                <br><strong>Answer:</strong> Eisenhower Matrix - 긴급/중요, 긴급/중요하지 않음, 긴급하지 않음/중요, 긴급하지 않음/중요하지 않음<br>
+            </li><br>
+            <li>Q7. 자, 이제 지금까지 우리가 논의했던 요구사항 분석 내용을 일목요연하게 보고서 형태로 정리해 줘. 보고서에는 사업에 대한 개요, 특성, 페르소나, 요구사항, 요구사항에 대한 우선순위 결정 내용, 우선 순위 결정에 따른 단계별 챗봇 개발 전략이 모두 들어가 있어야 해.
+                <br><strong>Answer:</strong> 요구사항 분석 보고서 - 사업 개요, 특성, 페르소나, 요구사항, 우선순위 결정 내용, 단계별 챗봇 개발 전략 포함<br>
+            </li><br>
+            <li>Q8. 자, 이제 이 페인포인트에 기반해서 페인포인트 분석을 진행해 줘. 페인포인트가 무엇인지 알지? 모르면 나에게 추가 질문을 해 줘.
+                <br><strong>Answer:</strong> 페인포인트 분석 - 제한된 답변 가능성, 사용자 경험 문제, 기술적 제한, 사용자 만족도 저하, 정보 제공의 한계, 개인화 부족, 접근성 문제<br>
+            </li><br>
+            <li>Q9. 자, 이제 이 분석 결과를 바탕으로 (잠재적) 사용자의 요구사항을 도출해 줘.
+                <br><strong>Answer:</strong> (잠재적) 사용자의 요구사항 - 유연한 답변 제공, 자연스러운 대화 흐름, 문맥 이해 및 지속적인 대화, 빠르고 직관적인 인터페이스, 깊이 있는 정보 제공, 개인화된 답변 제공, 높은 접근성<br>
+            </li><br>
+            <li>Q10. 자, 이제 이 질문 및 답변 목록을 바탕으로 질문 유형별로 요구 사항을 도출 해줘.
+                <br><strong>Answer:</strong> 질문 유형별 요구사항 - 기능 및 성능 관련 질문, 통증 및 증상 관련 질문, 챗봇 사용 경험 질문 등<br>
+            </li><br>
+            <li>Q11. LLM 연동 챗봇을 개발하는 과정에서 RAG 기술을 동원해서 이러한 다양한 통증에 대한 질문에 응답할 수 있게 하려고 해. 즉, 우리가 개발하려고 하는 챗봇은 기존의 규칙 기반 챗봇과 다르게, 매끄럽게 자연어 질문과 자연어 답변을 할 수 있으면서 동시에 이 챗봇 운영 주체가 되는 의료/연구기관에 있는 다양한 자료를 검색 증강생성(RAG) 작업에 활용하는 챗봇이 될 거야. 이제 조금 전에 나왔던 수 많은 욕사항들을 이런 챗봇에 반영하기 위해 요구사항들에 우선순위를 매기려고 해. 내가 특정 우선 순위 결정 방법을 지정하면 그 방법에 맞춰 요구사항들의 우선순위를 결정해 줘. 그렇게 할 수 있지? 할 수 있다면 일단 '예'라고 대답해 줘.
+                <br><strong>Answer:</strong> 예.<br>
+            </li><br>
+            <li>Q12. Eisenhower Matrix로 우선 순위를 결정해 주되, 이 행렬을 표 형태로도 그려줘. 코드를 작성해서 치러하지 않고 간단히 2 X 2 행렬 형태로 표를 작성해 줘.
+                <br><strong>Answer:</strong> Eisenhower Matrix - 2x2 행렬 형태로 요구사항을 분류<br>
+            </li><br>
+            <li>Q13. 이제  가상의 인물 이름들을 포함해서 다시 조직 편성 체계를 수립해줘.
+                <br><strong>Answer:</strong> 조직 편성 체계 - 가상의 인물 포함<br>
+            </li><br>
+            <li>Q14. 이 조직 체계를 기반으로 의료기관과 개발사의 RACI 매트릭스를 표 형태로 작성해줘. 코드를 작성해서 그리지 말고 간단히 표를 작성해 줘.
+                <br><strong>Answer:</strong> RACI 매트릭스 - 각 활동에 대한 책임 (Responsible), 최종 승인자 (Accountable), 자문 (Consulted), 정보제공 (Informed) 역할 정의<br>
+            </li><br>
+            <li>Q15. 자, 이제 이 질문지를 질문 유형별로 정리해 줘.
+                <br><strong>Answer:</strong> 질문 유형별 설문지 - 일반 정보 질문, 통증 및 증상 관련 질문, 챗봇 사용 경험 질문 등<br>
+            </li><br>
+            <li>Q16. 자, 이제 이 질문 및 답변 목록을 바탕으로 질문 유형별로 요구 사항을 도출 해줘.
+                <br><strong>Answer:</strong> 질문 유형별 요구사항 도출<br>
+            </li><br>
+            <li>Q17. 이제 이 챗봇을 개발하는데 참여할 조직이 해당 기관 직원들과 우리 개발 조직이야. 이 두 조직의 간단한 조직 편성을 가상으로 수립해 줘.
+                <br><strong>Answer:</strong> 조직 편성 체계 - 의료기관과 개발 조직의 역할 및 구성원<br>
+            </li><br>
+            <li>Q18. 자, 지금까지 우리는 요구사항 분석을 위해서 다양한 도구들을 활용해서 가상의 요구사항을 도출해 보았어. 이제 나는 이런 가상의 요구사항들을 바탕으로 실제적인 질문지를 구성해 실제 사용자와 대면해서 질문을 함으로써 실제적인 요구사항을 알아내려고 해. 이렇게 하기에 알맞게 자세한 질문지를 질문 유형별로 정리해 줘. 유형별 질문은 최소한 3개 이상이어야 해.
+                <br><strong>Answer:</strong> 대면 인터뷰 질문지 - 유형별 최소 3개 질문 포함<br>
+            </li><br>
+            <li>Q19. 자, 이제 이 질문 및 답변 목록을 바탕으로 질문 유형별로 요구 사항을 도출 해줘.
+                <br><strong>Answer:</strong> 질문 유형별 요구사항 도출<br>
+            </li><br>
+        </ol>
+        <div>
+            <p>
+                <strong>Summary:</strong><br>
+                1. 페르소나: 건강 도우미 "헬시" - 친절하고 공감적, 신뢰할 수 있는, 참을성 있는, 적극적<br>
+                2. 가상의 인물 요구사항 - 자세 교정, 스트레칭 안내, 통증 완화 팁 등<br>
+                3. 요구사항 우선순위 결정 - Must Have, Should Have, Could Have, Won't Have<br>
+                4. 우선순위 결정 - 기본적 요구, 성능 요구, 매력적 요구, 무관한 요구, 반대 요구<br>
+                5. Eisenhower Matrix - 긴급/중요, 긴급/중요하지 않음, 긴급하지 않음/중요, 긴급하지 않음/중요하지 않음<br>
+                6. 요구사항 분석 보고서 - 사업 개요, 특성, 페르소나, 요구사항, 우선순위 결정 내용, 단계별 챗봇 개발 전략 포함<br>
+                7. 페인포인트 분석 - 제한된 답변 가능성, 사용자 경험 문제, 기술적 제한, 사용자 만족도 저하, 정보 제공의 한계, 개인화 부족, 접근성 문제<br>
+                8. (잠재적) 사용자의 요구사항 - 유연한 답변 제공, 자연스러운 대화 흐름, 문맥 이해 및 지속적인 대화, 빠르고 직관적인 인터페이스, 깊이 있는 정보 제공, 개인화된 답변 제공, 높은 접근성<br>
+                9. 질문 유형별 요구사항 - 기능 및 성능 관련 질문, 통증 및 증상 관련 질문, 챗봇 사용 경험 질문 등<br>
+                10. 포커스 그룹 인터뷰 질문 - 첫인상 및 사용자 경험, 대화 흐름 및 응답의 유용성, 개인 맞춤형 정보의 효과<br>
+                11. 단계별 개발 전략 - 핵심 기능 구현, 추가 기능 및 부가 기능 개발, 지속적인 서비스 개선 등<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

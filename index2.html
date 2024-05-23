@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web 3.0 Homepage</title>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar-container"></nav>
+
+    <script>
+        $(document).ready(function(){
+            console.log("jQuery is loaded successfully.");
+            $("#navbar-container").load("navbar.html", function(response, status, xhr) {
+                if (status == "error") {
+                    console.log("Error loading navbar: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

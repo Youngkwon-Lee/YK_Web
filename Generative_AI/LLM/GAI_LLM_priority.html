@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web 3.0 Homepage</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="../../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="../../index.html"> 
+                <img src="../images/logos.png" alt="logo" class="logo-1"> 
+                <h1 class="site-title ml-3 mb-0 animated fadeInLeft">Web 3.0</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="0">Web</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="1">HTML</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../css.html" data-scroll-nav="2">CSS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../javascript.html" data-scroll-nav="3">Javascript</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../solidity.html" data-scroll-nav="4">Solidity</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../exercise.html" data-scroll-nav="5">Exercise</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Day/Night mode button -->
+    <input type="button" value="day" onclick="nightDayHandler(this);" class="day-night-button animated fadeIn">
+
+    <h1><a href="../index.html">2. 우선순위결정</a></h1>
+    <div id="grid">
+        <ol>
+            <li>Q1. 나는 대학병원에서 근무하는 물리치료사인데, LLM을 연동해서 블록체인을 활용해서 재활환자 대상으로 데이터 축적 및 재활 정보 및 운동 지식 정보 제공하는 서비스를 개발하려고해. 이럴 때 페르소나로 삼을만한 인물의 정보를 정리해줘.
+                <br><strong>Answer:</strong> 페르소나 1: 김민수 (45세, 회사원) - 허리 디스크 수술 후 초기 재활 단계<br>
+                페르소나 2: 이지영 (30세, 프리랜서 디자이너) - 손목 통증 중기 재활 단계<br>
+                페르소나 3: 박정훈 (65세, 은퇴자) - 무릎 관절염 관리<br>
+            </li>
+            <li>Q2. 고객여정 매핑을 시각적으로 나타낸 것이 곧 스토리보드라고 할 수 있을까?
+                <br><strong>Answer:</strong> 고객 여정 매핑과 스토리보드는 비슷한 목적을 가지지만 다른 도구입니다. 고객 여정 매핑은 전체 경험을 단계별로 분석하는 데 중점을 두고, 스토리보드는 특정 시나리오를 시각적으로 표현하여 사용자 경험을 구체적으로 상상하고 설계하는 데 사용됩니다.&#8203;``【oaicite:2】``&#8203;<br>
+            </li>
+            <li>Q3. 고객 여정 매핑의 사례를 인터넷에서 찾아서 링크를 달아줘.
+                <br><strong>Answer:</strong> Visme, Hotjar, Zendesk, Woopra에서 다양한 고객 여정 매핑 사례를 참고할 수 있습니다.&#8203;``【oaicite:1】``&#8203;<br>
+            </li>
+            <li>Q4. 나의 고객 여정 매핑을 그려줄래?
+                <br><strong>Answer:</strong> 고객 여정 맵: 재활환자 대상 데이터 축적 및 정보 제공 서비스<br>
+                1. 인식: 병원에서 앱 추천, 기대감, 기술 이해 부족<br>
+                2. 탐색: 앱 정보 검색, 기대와 불안, 후기 부족<br>
+                3. 구매: 앱 다운로드, 긴장, 설치 복잡성<br>
+                4. 초기 설정: 로그인 및 설정, 만족감, 설정 복잡성<br>
+                5. 사용: 운동 프로그램 수행, 성취감, 기술적 문제<br>
+                6. 문제 해결: 고객 지원 요청, 좌절과 희망, 응답 시간 문제<br>
+                7. 유지 및 재활용: 정기적 사용, 만족, 동기 부족<br>
+                8. 피드백 및 추천: 피드백 제공, 만족, 피드백 반영 여부&#8203;``【oaicite:0】``&#8203;  <br>
+            </li>
+        </ol>
+        <div>
+            <p>
+                <strong>Summary:</strong><br>
+                1. 페르소나: 김민수, 이지영, 박정훈<br>
+                2. 고객 여정 매핑: 인식, 탐색, 구매, 초기 설정, 사용, 문제 해결, 유지 및 재활용, 피드백 및 추천<br>
+                3. 고객 여정 매핑과 스토리보드의 차이점 설명<br>
+                4. 고객 여정 매핑 사례 링크 제공<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

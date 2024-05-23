@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web 3.0 Homepage</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html"> 
+                <img src="../images/logos.png" alt="logo" class="logo-1"> 
+                <h1 class="site-title ml-3 mb-0 animated fadeInLeft">Web 3.0</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../index.html" data-scroll-nav="0">Web</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../index.html" data-scroll-nav="1">HTML</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../css.html" data-scroll-nav="2">CSS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../javascript.html" data-scroll-nav="3">Javascript</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../solidity.html" data-scroll-nav="4">Solidity</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../exercise.html" data-scroll-nav="5">Exercise</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Day/Night mode button -->
+    <input type="button" value="day" onclick="nightDayHandler(this);" class="day-night-button animated fadeIn">
+
+    <h1>1. SQLite</h1>
+
+    <div id="grid">
+        <ol>
+            <li>
+                <strong>1. SQLite 설치 :</strong> PowerShell을 열고 데이터베이스 생성<br>
+            </li>
+            <br>
+            <strong>2. 데이터베이스 접속 방법 :</strong>
+            <li>
+                <code>.database</code> -> <code>.open 데이터베이스이름</code> -> <code>.database</code>
+            </li>
+            <br>
+            <strong>3. TABLE 생성 방법</strong>
+            <li>CustID VARCHAR(20) NOT NULL,</li>
+            <li>CustName VARCHAR(20) NOT NULL,</li>
+            <li>CustRating VARCHAR(10) NOT NULL,</li>
+            <li>Reserves INT DEFAULT 0,</li>
+            <li>Phone VARCHAR(11) NOT NULL,</li>
+            <li>Address VARCHAR(50),</li>
+            <li>PRIMARY KEY(CustID)</li>
+            <li>);</li>
+            <br>
+            <strong>4. DATA 입력 방법</strong>
+            <li>INSERT INTO CUSTOMER (CustID, CustName, CustRating, Reserves, Phone, Address)</li>
+            <li>VALUES('magician', '이현우', 'gold', 30000, '01022221234', '서울');</li>
+            <li>SELECT * FROM CUSTOMER;</li>
+            <li><code>.header on</code></li>
+            <li><code>.mode columns</code></li>
+            <li>SELECT * FROM CUSTOMER;</li>
+            <li>SELECT CustId, CustName FROM CUSTOMER;</li>
+            <br>
+            <strong>5. DB 브라우저 설치</strong>
+            <li>http://sqlitebrowser.org에서 설치 (64비트)</li>
+            <br>
+            <strong>파이썬을 사용한 실습</strong>
+            <li>파이썬 sqlite3 활용</li>
+            <li>파이썬 설치</li>
+            <li>import sqlite3, connect(), cursor(), execute(), commit(), close()</li>
+            <br>
+            <li><strong>CUSTOMERS 테이블 스키마 생성 코드</strong></li>
+            <pre><code>
+import sqlite3
+
+con = sqlite3.connect('mymall.db')
+cur = con.cursor()
+
+cur.execute("DROP TABLE IF EXISTS CUSTOMERS")
+sql = """
+CREATE TABLE CUSTOMERS (
+    CustID VARCHAR(20) NOT NULL,
+    CustName VARCHAR(20) NOT NULL,
+    CustRating VARCHAR(10) NOT NULL,
+    Reserves INT DEFAULT 0,
+    Phone VARCHAR(11) NOT NULL,
+    Address VARCHAR(50),
+    PRIMARY KEY(CustID)
+);
+"""
+cur.execute(sql)
+con.commit()
+cur.close()
+con.close()
+            </code></pre>
+            <br>
+            <li><strong>데이터 입력 코드</strong></li>
+            <pre><code>
+import sqlite3
+
+con = sqlite3.connect('mymall.db')
+cur = con.cursor()
+
+sql = """
+INSERT INTO CUSTOMERS (CustID, CustName, CustRating, Reserves, Phone, Address)
+VALUES ('magician', '이현우', 'gold', 30000, '01022221234', '서울');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO CUSTOMERS (CustID, CustName, CustRating, Reserves, Phone, Address)
+VALUES ('kwon3856', '이영권', 'Platinum', 10000, '01067046556', '부산');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO CUSTOMERS (CustID, CustName, CustRating, Reserves, Phone, Address)
+VALUES ('eskim', '김이슬', 'silver', 20000, '01011111111', '부천');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO CUSTOMERS (CustID, CustName, CustRating, Reserves, Phone, Address)
+VALUES ('yk', '이승만', 'bronze', 40000, '01022222222', '강릉');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO CUSTOMERS (CustID, CustName, CustRating, Reserves, Phone, Address)
+VALUES ('hoho', '박지성', 'gold', 50000, '01055555555', '인천');
+"""
+cur.execute(sql)
+
+con.commit()
+cur.close()
+con.close()
+            </code></pre>
+            <br>
+            <li><strong>ORDERS 테이블 스키마 생성 코드</strong></li>
+            <pre><code>
+import sqlite3
+
+con = sqlite3.connect('mymall.db')
+cur = con.cursor()
+
+cur.execute("DROP TABLE IF EXISTS ORDERS")
+sql = """
+CREATE TABLE ORDERS (
+    OrderNumber INT NOT NULL,
+    CustID VARCHAR(20) NOT NULL,
+    ProdName VARCHAR(20) NOT NULL,
+    Quantity INT DEFAULT 0,
+    UnitPrice INT NOT NULL,
+    OrderDate DATE,
+    PRIMARY KEY(OrderNumber),
+    FOREIGN KEY (CustID) REFERENCES CUSTOMERS(CustID)
+);
+"""
+cur.execute(sql)
+con.commit()
+cur.close()
+con.close()
+            </code></pre>
+            <br>
+            <li><strong>ORDERS 데이터 입력 코드</strong></li>
+            <pre><code>
+import sqlite3
+
+con = sqlite3.connect('mymall.db')
+cur = con.cursor()
+
+sql = """
+INSERT INTO ORDERS (OrderNumber, CustID, ProdName, Quantity, UnitPrice, OrderDate)
+VALUES (2018010101, 'kwon3856', '짜짜로니', 10, 1500, '2018-01-01');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO ORDERS (OrderNumber, CustID, ProdName, Quantity, UnitPrice, OrderDate)
+VALUES (2018020102, 'eskim', '우정파이', 2, 3500, '2018-02-01');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO ORDERS (OrderNumber, CustID, ProdName, Quantity, UnitPrice, OrderDate)
+VALUES (2018030203, 'wannatwo', '스낵라면', 5, 2500, '2018-03-01');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO ORDERS (OrderNumber, CustID, ProdName, Quantity, UnitPrice, OrderDate)
+VALUES (2018041201, 'moonlight', '맛있는덮밥', 3, 2500, '2018-04-12');
+"""
+cur.execute(sql)
+
+sql = """
+INSERT INTO ORDERS (OrderNumber, CustID, ProdName, Quantity, UnitPrice, OrderDate)
+VALUES (20180513789, 'magician', '탄산콜라', 3, 2000, '2018-02-05');
+"""
+cur.execute(sql)
+
+con.commit()
+cur.close()
+con.close()
+            </code></pre>
+            <br>
+
+            <br>
+            <li><strong>ORDERS 데이터 입력 코드</strong></li>
+            <pre><code>
+                import sqlite3
+                # SELECT * FROM CUSTOMERS
+                
+                con = sqlite3.connect('mymall.db')
+                cur = con.cursor()
+                
+                sql = """
+                SELECT * 
+                FROM CUSTOMERS 
+                WHERE CustID = 'kwon3856';
+                """
+                
+                sql = """
+                SELECT CustID, CustName 
+                FROM CUSTOMERS 
+                WHERE CustID = 'kwon3856';
+                """
+                
+                sql = """
+                SELECT ProdName, UnitPrice 
+                FROM ORDERS 
+                WHERE UnitPrice >= 2000;
+                """
+                
+                sql = """
+                SELECT CustID, ProdName, OrderDate 
+                FROM ORDERS 
+                WHERE Quantity * UnitPrice > 7000;
+                """
+
+                sql = """
+                SELECT CustID, ProdName, OrderDate 
+                FROM ORDERS 
+                WHERE OrderDate > '2018-03-01';
+                """
+
+                sql = """
+                SELECT COUNT(OrderDate) 
+                FROM ORDERS 
+                WHERE OrderDate > '2018-03-01';
+                """
+                
+                result = cur.execute( sql )
+                for r in result:
+                    for i in range(len(r)):
+                        print(r[i], end=' ')
+                    else:
+                        print()
+                
+                
+                con.commit()
+                cur.close()
+                con.close()
+                
+            </code></pre>
+            <br>
+
+            <br>
+            <li><strong>MAX, MIN, SUM,AVERAGE</strong></li>
+            <pre><code>
+                import sqlite3
+                # SELECT * FROM CUSTOMERS
+                
+                con = sqlite3.connect('mymall.db')
+                cur = con.cursor()
+
+                sql = """
+                SELECT MAX(UnitPrice) 
+                FROM ORDERS 
+                WHERE OrderDate > '2018-03-01';
+                """
+                sql = """
+                SELECT AVG(Quantity) 
+                FROM ORDERS 
+                """
+                
+                
+                result = cur.execute( sql )
+                for r in result:
+                    for i in range(len(r)):
+                        print(r[i], end=' ')
+                    else:
+                        print()
+                
+                
+                con.commit()
+                cur.close()
+                con.close()
+                
+            </code></pre>
+            <br>
+
+            <br>
+            <li><strong>UPDATE</strong></li>
+            <pre><code>
+                UPDATE 테이블_이름
+                SET 필드_이름1 = 값1, 필드_이름2 = 값2,
+                [[WHERE 조건];
+
+
+                import sqlite3
+                # SELECT * FROM CUSTOMERS
+                
+                con = sqlite3.connect('mymall.db')
+                cur = con.cursor()
+
+                sql = """
+                UPDATE ORDERS 
+                SET ProdName='스낵라면'
+                WHERE ProdName='짜짜로니';
+                """               
+                
+                result = cur.execute( sql )
+                print( type(result), result)
+                
+                cnt=0
+                #r = result.fetchone()
+                #print(r)
+                for r in result:
+                    cnt+=1
+                    print(cnt, r)
+                
+                    for i in range(len(r)):
+                        print(r[i], end=' ')
+                    else:
+                        print()
+                
+                
+                con.commit()
+                cur.close()
+                con.close()
+            </code></pre>
+            <br>
+            <br>
+            <li><strong>그룹별 검색</strong></li>
+            <pre><code>
+                SELECT [ALL|DISTINCT] 필드_리스트
+                FROM 테이블_이름
+                [WHERE 조건]
+                GROUP BY 필드_리스트;
+
+                sql = """
+                SELECT  ProdName, sum(quantity)
+                FROM ORDERS
+                GROUP BY ProdName;
+                """  
+                sql = """
+                SELECT  ProdName, sum(quantity * UnitPrice)
+                FROM ORDERS
+                GROUP BY ProdName;
+                """                              
+
+            </code></pre>
+            <br>
+            <br>
+            <li><strong>데이터 조인</strong></li>
+            <pre><code>
+                SELECT 필드_리스트 FROM 테이블_리스트 WHERE 조건;              
+
+                sql = """
+                SELECT  CUSTOMERS.CustName, CUSTOMERS.Phone, ORDERS.ProdName, ORDERS.OrderDate
+                FROM ORDERS, CUSTOMERS
+                WHERE ORDERS.CustID = CUSTOMERS.CustID;
+                """
+
+                sql = """
+                SELECT  CUSTOMERS.CustName, CUSTOMERS.Phone, ORDERS.quantity * ORDERS.UnitPrice, ORDERS.OrderDate
+                FROM ORDERS, CUSTOMERS
+                WHERE ORDERS.ProdName='스낵라면'
+                      AND ORDERS.CustID = CUSTOMERS.CustID;
+                """
+                
+                
+            </code></pre>
+
+            <br>
+            <li><strong>회원조회 주문조회 회원검색 주문검색</strong></li>
+            <pre><code>
+                1 = 회원조호
+                2 = 주문조회
+                3 = 회원검색
+                4 = 주문검색
+                - = Exit program
+
+                
+                
+            </code></pre>
+
+            <br>
+            <li><strong>스키마!!</strong></li>
+            <pre><code>
+                import sqlite3
+
+                #CUSTOMERS 테이블 스키마 생성
+                con = sqlite3.connect( 'mymall.db')
+                cur = con.cursor()
+
+                sql = """
+                """
+
+                result = cur.execute( sql )
+
+                cur.close()
+                con.close()
+            </code></pre>
+            <br>
+
+            
+            <br>
+            <li><strong>온라인몰</strong></li>
+            <pre><code>
+                import sqlite3
+
+                def Menu():
+                    while True:
+                        print("1 = 회원 조회")
+                        print("2 = 주문 조회")
+                        print("3 = 회원 검색")
+                        print("4 = 주문 검색")
+                        print("0 = Exit program")
+                        num = input("번호: ")
+                        if num.isdigit():
+                            num = int( num )
+                            if num in range(0,5):
+                                return num
+                
+                CustomerSchema="CustomerID CustomerName Rating Reserves PhoneNumber Address"
+                OrderSchema ="OrderNUmber CustomerName ProductName Quiantity UnitPrice OrderDate"
+                
+                def printResult(schema, result):
+                    schema_list = schema.split()
+                    print("-"*(len(schema)+10))
+                    print(schema)
+                    print("-"*(len(schema)+10))
+                
+                    cnt = 0
+                    for rec in result:
+                        cnt += 1
+                        for j in range(len(rec)):
+                            print(rec[j], end=" ")
+                            if len(str(rec[j])) < len(schema_list[j]):
+                              print(" "*(len(schema_list[j])-len(str(rec[j]))), end="")
+                        print( )
+                        
+                    print("-"*(len(schema)+10))
+                    return cnt
+                
+                #온라인 몰 프로그램
+                con = sqlite3.connect( 'mymall.db')
+                cur = con.cursor()
+                
+                while True:
+                    cmd = Menu()
+                    if cmd == 0:
+                        break
+                    elif cmd == 1:
+                        sql = """
+                        SELECT * FROM CUSTOMERS;
+                        """
+                        result = cur.execute( sql )
+                        cnt = printResult(CustomerSchema, result)
+                        print(f'{cnt} 명의 회원이 있습니다.\n')
+                
+                    elif cmd == 2:
+                        sql = """
+                        SELECT * FROM ORDERS;
+                        """
+                        result = cur.execute( sql )
+                        cnt = printResult(OrderSchema, result)
+                        print(f'{cnt}건의 주문이 있습니다.\n')
+                    elif cmd == 3:
+                        pnum = input('전화번호 끝의 네자리를 입력하세요: ')
+                
+                        sql ="""
+                        SELECT * FROM CUSTOMERS
+                        WHERE Phone like '%"""+ pnum + """';"""
+                
+                        result = cur.execute( sql )
+                        cnt = printResult(CustomerSchema, result)
+                        if cnt:
+                            print(f'{cnt} 명의 고객이 있습니다.\n')
+                        else:
+                            print('고객 정보가 없습니다.\n')
+                
+                    elif cmd == 4:
+                        pass
+                
+                cur.close()
+                
+                con.close()
+            </code></pre>
+            <br>
+            <br>
+            <strong>TABLE 명령어</strong>
+            <li>테이블 생성 : <code>CREATE TABLE 테이블이름</code></li>
+            <li>테이블 변경 : <code>ALTER TABLE 테이블이름</code></li>
+            <li>테이블 삭제 : <code>DROP TABLE 테이블이름</code></li>
+            <br>
+            <strong>Tip</strong>
+            <li>SQL 명령어는 대소문자 구분 없음, 테이블 이름은 구분</li>
+            <li>DBMS 서버에 연결 -> DB 생성 및 사용 -> 테이블 생성 -> 데이터 입력 및 조작 -> 데이터베이스 연결 해제</li>
+            <br>
+            <section>
+                <strong>실습 데이터 모델 : 개체-관계 모델</strong>
+                <li><img src="images/customer.png" alt="Customer Model"></li>
+                <li><img src="images/data_type.png" alt="Data Type"></li>
+                <li><img src="images/data_create.png" alt="Data Create"></li>
+                <li><img src="images/data_model.png" alt="Data Model"></li>
+            </section>
+            <br>
+            <li>Summary: DBMS 서버 연결 -> DB 생성 -> 테이블 생성 -> 테이블 변경/제거</li>
+            <li>SQLite3 열기</li>
+        </ol>
+    </div>
+</body>
+</html>
