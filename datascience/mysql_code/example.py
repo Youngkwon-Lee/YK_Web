@@ -7,7 +7,7 @@ conn = pymysql.connect(host='localhost', port=3306, user='root', password='3856'
 cursor = conn.cursor()
 
 # SQL 쿼리 실행
-sql = "SELECT * from actor"`
+sql = "SELECT * from actor"
 cursor.execute(sql)
 
 # 쿼리 결과 가져오기
@@ -20,4 +20,3 @@ for row in data:
 # 커서와 연결 닫기
 cursor.close()
 conn.close()
-``

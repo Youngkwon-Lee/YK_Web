@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web 3.0 Homepage</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="../../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="../../index.html"> 
+                <img src="../../images/logos.png" alt="logo" class="logo-1"> 
+                <h1 class="site-title ml-3 mb-0 animated fadeInLeft">Web 3.0</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="0">Web</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../index.html" data-scroll-nav="1">HTML</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../css.html" data-scroll-nav="2">CSS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../javascript.html" data-scroll-nav="3">Javascript</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../solidity.html" data-scroll-nav="4">Solidity</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../exercise.html" data-scroll-nav="5">Exercise</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Day/Night mode button -->
+    <input type="button" value="day" onclick="nightDayHandler(this);" class="day-night-button animated fadeIn">
+
+    <h1><a href="../index.html">실습</a></h1>
+    <div id="grid">
+
+
+
+            <pre>
+                <h2><strong><서비스 기획></strong></h2>
+                <h3><strong><시작></strong></h3>
+                Q1. LLM 연동 서비스 기획 실습하기 위한 좋은 주제를 몇가지 알려 줘.
+
+                A> 통증관리, 의료진 추천 서비스, 디지털 헬스케어 일지, 장애인 도움 챗봇, 의료 상담 및 건강 관리
+                    - 기본적인 건강 상담 및 증상 분석을 제공하는 AI 비서.
+                    - 사용자의 건강 상태를 추적하고, 개인화된 건강 관리 팁 제공.
+
+                Q2. 2번 서비스를 서비스 디자인이라는 측면에서 디자인 씽킹 프로세스 방법으로 구현할 때 유념해야 할 점을 제시해 줘.
+
+                <h3><strong><가상의 사용자 인터뷰 실시 및 기록></strong></h3>
+                Q3. 자, 이제부터 내가 '근골격계 통증 상담 및 건강관리'라는 LLM 연동 서비스를 서비스 디자인이라는 관점에서
+                 디자인 씽킹 프로세스를 따라 가며 차근차근 개발해 보려고 해. 이것을 위해 어떤 점을 유념하면 될까?
+                Q4. 자, 이제부터 본격적으로 디자인 씽킹 프로세스를 밟을 거야. 일단 공감 단계부터 시작할 거야. 그중에서도
+                 사용자 대상 설문조사를 제일 먼저 진행할 건데, 가상의 설문 조사 문항을 우리가 개발하려고 하는 '근골격계 
+                 통증 상담'라는 LLM 연동 서비스를 기획하기에 알맞게 설문 조사 문항을 제시해 줘.
+                Q5. 자, 이제 이 설문조사 문항을 바탕으로 가상의 사용자 10명을 대상으로 설문 조사를 진행한다고 가정하고, 
+                가상의 설문조사를 실시해 줘. 단, 설문 조사 선택 문항에는 꼭 번호를 달아서 향후에 통계 분석을 할 수 있게 
+                해 줘.
+                Q6. 이 설문 조사 결과를 엑셀 파일로 저장해 줘.
+                Q7. 방금 우리가 시행한 가상의 설문조사 데이터를 분석하고 해석해 줘.
+                 A>제안:맞춤형 스트레칭/운동 프로그램 제공
+                        통증 원인 분석 및 진단, 전문가 상담 연결, 통증 일지 및 기록 관리, 사용의 편리성 및 신속한 응답,
+                         교육 및 정보 제공
+                <h3><strong><가상의 사용자 관찰 실시 및 기록></strong></h3>
+                Q8. 우리가 지금 '근골격계 통증 상담 및 건강관리'라는 LLM 연동 서비스를 서비스 디자인이라는 관점에서 
+                디자인 씽킹 프로세스를 따라 가며 차근차근 기획해 보고 있잖아? 맞지? 그래서 이번에는 물리치료사, 운동러버,
+                 통증을 가지고 있는 사용자의 대표할 만한 일물에 대해서 가상으로 설정하고, 이를 바탕으로 면밀한 사용자 
+                 관찰을 진행하려고 해. 이 시뮬리에션을 진행한 다음에 진행 결과를 분석하고 해석해 줘. 그래서 사용자 
+                 요구사항을 도출하고 최종적으로 적절한 개발 방향을 제시해 줘.
+                <h3><strong><가상의 페르소나 개발 실시 및 기록></strong></h3>
+                Q9. 자, 이번에는 공감 단계에서 흔히 하는 페르소나를 구성해 줘. 페르소나를 구성할 때는 물리치료사, 
+                헬스트레이너, 통증이 있는 사용자를 나눠서 제시해 줘.
+                <h3><strong><가상의 사용자 여정 맵(+감정 지도) 작성 및 기록></strong></h3>
+                Q10. 자, 이제 공감 단계 중에서 사용자 여정 지도 작성 단계를 수행해 줘(감정의 변화 포함).
+                 A> 사용자 친화적 인터페이스, 개인 맞춤형 프로그램, 실시간 피드백 및 지원, 장기 관리 솔루션, 신뢰성 높은
+                  정보 제공, 커뮤니티 기능
+                Q11. 이 사용자 여정 지도가 우리가 개발하려고 하는 근골격계 통증 상담 및 건강관리의 취지에 맞아?
+                Q12. 다시 물어볼게. 이 사용자 여정 지도가 우리가 개발하려고 하는 '근골격계 통증 상담 및 건강관리'라는 
+                LLM 연동 서비스의 취지에 맞아?
+                <h3><strong><가상의 사용자 조사 데이터 분석 및 인사이트></strong></h3>
+                Q13. 이제 디자인 씽킹 프로세스 중에 문제 정의 단계를 수행할 거야. 이 문제 정의 단계를 통해서 문제 
+                진술문을 도출해야 하는데, 그러기 전에 먼저 사용자 조사 데이터를 분석하고 이것으로부터 어떤 식견(insight)를 
+                도출하려고 해. 그런데 사용자 조사 데이터로는 우리가 앞서서 진행했던 모든 과정에서 나온 모든 데이터
+                (예를 들면, 설문조사 통계 분석 및 해석 결과, 사용자 관찰 결과 분석 및 해석 내용, 페르소나, 사용자 여정 
+                지도)를 사용해 줘.
+                <h3><strong><가상의 문제 진술서 작성></strong></h3>
+                Q14. 아까 네가 내보인 식견(insight)을 바탕으로 문제진술문을 조금 더 간단하지만 핵심이 들어있게 다시 작성해 줘.
+                <h3><strong><가상의 "How Might WE" 질문 생성></strong></h3>
+                Q15. 이번에는 문제 진술문을 바탕으로 How Might We 기법을 수행해 줘.
+                <h3><strong><가상의 "5 Why" 질문 생성></strong></h3>
+                Q16. 5Why 기법이 무엇인지 알고 있어?
+                Q17. 아까 나왔던 모든 HMW 질문에 대해서 5Why 기법을 수행해 줘.
+                <h3><strong><아디이어 도출 단계></strong></h3>
+                Q18. 이제부터 우리가 만들려고 하는 '근골격계 통증 상담 및 건강관리'라는 LLM 연동 서비스에 
+                대해 문제 진술문, 문제진술문에 대한 HWM 기법으로 도출한 내용, HMW로 도출한 질문들에 대해서 
+                5Why 기법으로 찾아낸 기법으로 찾아낸 근본 원인과 해결책을 참고해서 아이디어 도출 단계를 
+                수행해 줘.
+                <h3><strong><1) 가상의 브레인스토밍></strong></h3>
+                Q19. 최종적으로 정리한 해결책들에 대해서 브레인스토밍 방법으로 아이디어를 도출해 줘. 
+                아이디어를 도출할 때는 우리가 'LLM 연동 근골격계 통증 상담 및 건강관리'를 개발하려고 
+                기획하고 있다는 점을 항상 생각하면서 수행해 줘. 
+
+                <h3><strong><가상의 무작위 단어 기법 적용></strong></h3>
+                Q20.내 말은 브레인스토밍 방법답게, 기획자와 개발자와 사용자들이 서로 아이디어들을 경쟁하듯이 내고, 
+                서로의 아이디어에 대한 비판 없이 계속 이런 과정을 반복하는 식으로 아이디어를 최대한 많이 내달라는 말이야.
+                다만 아이디어의 방향성은 항상 'LLM연동 근골격계 통증 상담 및 건강관리'에 맞춰져 있어야 해. 
+                그리고 가상의 각 인물이 최소한 다섯 개 이상 아이디어를 내줘야 해.
+                Q21. 브레인스토밍 방법이 무엇인지 설명해 줘.
+                Q22. 네가 방금 설명한 브레인스토밍의 원칙과 절차에 맞춰서 우리가 개발하려는 'LLM 연동 근골격계 통증 상담 
+                및 건강관리'의 근본 문제 원인에 대한 해결책과 관련해서 다양한 아이디어를 내는 시뮬레이션을 진행해 줘.
+                
+                <h3><strong><2) 가상의 마인드맵, scamper, SWOT, brainwriting></strong></h3>
+                
+                <h3><strong><가상으로 프로토타입 유형 선택하기></strong></h3>
+                Q23.'LLM 연동 근골격계 통증 상담 및 건강관리'에 대한 프로토타입을 만들어 보려고 해. 
+                이 프로토타입을 저충실도 프로토타입에서 시작해서 고충실도 프로토타입에 이르기까지 단계별로 
+                제작하려고 해. 여기에 알맞게 단계별 접근 전력을 제시해 줘.
+                Q24. 그러면 일단 저충실도 프로토타입을 내가 종이로 그리기 전에 그 프로토타입의 전반적인 골격을 제시해 줘.
+                Q25. 이 저충실도 프로토타입과 관련해서 내가 더 알고 있으면 좋을 만한 정보가 있어?
+                Q26.이렇게 만든 프로토타입으로 사용자들에게 의견을 듣고자해. 
+                그래서 네가 가상의 사용자를 10명을 만들고, 의견을 들을 수 있게 시물레이션해줄래?
+                이렇게 만든 프로토타입으로 사용자들에게 의견을 듣고자 해. 
+                그래서 네가 가상의 사용자 10명을 만들고, 의견을 들을 수 있게 시뮬레이션해줄래?
+                Q27.이런 개선 요구사항들을 반영해서 아까 네가 작성했던 저충실도 프로토타입들을 
+                개선하거나 추가하거나다시 작성해 줘.
+                Q28. 이번에는 이 저충실도 프로토타입을 사용해서 중충실도 프로토타입을 만들고 싶은데, 
+                그렇게 해 줄 수 있어?
+                Q29. 이제 이 중충실도 프로토타입들을 사용해서 고충실도 프로토타입을 Adobe XD등으로 
+                수작업으로 만들기 전에 네가 너의 그림 그리는 기능(DALL-E)을 사용해서 최대한 이 와이어프레임을
+                재현하는 그림들을 그려 줬으면 하는데, 가능하겠니?
+                Q30. 자 이제 이렇게 우리가 디자인 씽킹 프로세스 과정을 따라서 서비스 디자인을 구현해 봤어. 
+                하지만 아직도 해야 할 일이 있는 것 같은데, 이제 기획 단계에서 더 해야 할 일들과, 개발단계에서 
+                해야 할 일들과, 배포 단계에서 해야 할 일들과, 운영 단계에서 해야 할 일들을 정리해 줘. 참고로 
+                개발 단계와 배포 단계와 운영 단계에서는 DevOps 형태로 애자일 방법(그 중에서도 Scrum)을 적용할 거야.
+                Q31. 이제 우리가 지금까지 진행하면서 생성했던 모든 내용을 참고해서 한 편의 서비스 디자인 기획서(200쪽 분량)를 
+                작성할 수 있게 상세 목차를 제시해 줘.
+                Q32. 외주 개발업체와 사업 책임자에게 이 기획 내용을 전달하려고 한다면, 사업 책임자나 외주 개발업체에게 제출할 
+                보고서는 어떻게 편성하는 게 좋을지 그 편성 방안(예를 들면 1쪽 짜리 총괄 보고서, 5쪽 짜리 요약 보고서, 
+                나머지 상세 내용)을 제시해 줘.
+                Q33. 이제부터 서비스 디자인 기획서 상세 목차 중에 내가 특정 항목을 지정하면 해당 항목에 관한 상세 내용을 체계적으로 작성해 줘.
+                <h3><strong><2) 기능명세서></strong></h3>
+                애자일 방법으로..
+
+
+                <h2><strong><2 시장 출시 전략과 확장성 평가 방법의 이해></strong></h2>
+                    시장 출시 전략 -> MVP
+                주요 구성요소 : 시장분석(목표시장 정의, 경쟁분석), 고객 세그멘테이션(페르소나 정의, 세그먼트별 접근 전략), 제품 포지셔닝(차별화 요소 강조, 브랜드 메시지 개발),
+                마케팅 및 브랜딩 전략(디지털 마케팅 계획, 광고 및 프로모션 전략), 유통 및 판매 채널(유통 경로 선택, 판매 파트너십 구축), 가격 정책(프로모션 및 할인 정책, 가격 책정 전략)
+
+                1차 데이터 수집 방법 : 설문조사, 인터뷰, 포커스 그룹 인터뷰, 사용자 테스트
+                2차 데이터 수집 방법 : 데스크 리서치, 산업보고서(Gatner,Forrester), 통계데이터(통계청, OECD), 기업 데이터베이스(Statista, IBISWorld)
+                
+
+                예시
+                목표 : LLM 연동 고객 지원 챗봇의 시장 수요와 경쟁 환경을 파악하기 위해 시장조사를 실시.
+                1차 데이터 수집 : 잠재고객을 대상으로 챗봇에 대한 요구사항과 기대치를 조사
+                2차 데이터 수집 : 산업보고서 , 통계 보고서
+                분석 : 기능과 주요 요구사항을 도출, 경쟁사를 분석을 통해 차별화 전략을 수립.
+
+
+                <h3><strong><시장 조사 방법></strong></h3>
+                Q1. 세계적으로 유명한 IT 시장 조사 기관이나 사이트들을 나열해 줘.
+                Q2. 이제 이사이트들에서 LLM(대규모 언어 모형)이나 GAI(생성형 인공 지능) 기술을 접목시킨 애플리케이션이나 웹 서비스 시장에 대해서 어떤 조사를 했는지, 그런 조사 내용이나 관련 데이터를 찾아서 정리해 줘.
+                Q3. 그렇다면 LLM 연동 챗봇(LLM integrated chatbot)에 대해서 이 사이트들을 참고해서 시장조사 데이터를 수집한 다음에 해당 데이터를 바탕으로 시장 조사를 해 줘.
+                Q4. 혹시 LLM 연동 챗봇에 대한 구체적인 시장 조사 자료를 인터넷에서 찾을 수 있어?
+                Q5. 이제 지금까지의 모든 서비스 디자인 내용을 바탕으로 시장 출시 전략(Go-To-Market Strategy)를 수립하려고 해. 이렇게 하기 위한 단계별 접근 전략을 제시해 줘.
+                Q6. 단계별 접근 전략을 하나 더 제시해 줘.
+                Q7. 이 단계별 접근 전략을 'LLM 연동 근골격계 통증 상담 챗봇 출시'라는 관점에서 다시 정리해 줘.
+                <h3><strong><경쟁 분석></strong></h3>
+
+
+
+
+
+
+                
+
+
+
+               
+
+            </pre>
+
+    </div>
+</body>
+</html>
