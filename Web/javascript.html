@@ -88,6 +88,68 @@
                 document.write(..)
             }
 
+            var myCar = {model: "bmz", color: "red", hp:100};
+            document.write(myCar.model +"<br>");
+
+            객체의 2가지 종류 : 내장객체, 사용자정의 객체
+
+            객체 상수로부터 객체 생성
+            var = myCar = {
+                model: "520d",
+                speed: 60,
+                color: "red",
+                brake: function(){
+                    this.speed -= 10;
+                },
+                accel: function(){
+                    this.speed += 10;
+                }
+            }
+            myCar.color = "yellow";
+            myCar.brake();
+
+
+            functioncheckDate() {
+                var s = document.getElementById("pdate").value;
+                var pdate = new Date(s);
+                var today = new Date();
+                var diff = today.getTime() - pdate.getTime();
+                var days = Math.floor(diff/ (1000*60*60*24))
+            }
+
+            <img src="timer.png" >
+            <img src="clock.png" >
+            <img src="trycatch.png" >
+
+            window.open : 새창열기
+            maxwindow.moveTo(0,0); 전체화면 보기
+
+            location.replace("http://") : 이동하기
+            navigator 
+            onclick 이벤트 : 
+            <input type="radio name="C1" value=""v1"
+                onclick="changeColor('lightblue')">파란색
+
+            onmouseover, onmouseout 이벤트onmouseover="OnMouseIn(this)"
+
+            <strong>JQuery</strong>
+            document.getElementsById("myPara").innerHTML = "안녕하세요?"
+             ->  $("#myPara").html("안녕하세요?");
+
+             <strong>AJAX</strong>
+             <img src="ajax.png">
+
+             <strong>jquery</strong>
+             <img src="jquery.png">
+             <strong>JSON(javascript object notation)</strong>
+
+             <strong>web storage</strong>
+             <img src="webstorage.png">
+             <img src="storageex.png">
+             
+
+
+
 
 
 
